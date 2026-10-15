@@ -1,0 +1,1351 @@
+{
+  "registry_version": 2,
+  "schema_family": "1.1",
+  "status_vocabulary": {
+    "wire": [
+      "benchmark_validated",
+      "indirectly_validated",
+      "unvalidated",
+      "known_problem"
+    ],
+    "order": [
+      "known_problem",
+      "unvalidated",
+      "indirectly_validated",
+      "benchmark_validated"
+    ],
+    "document_06_aliases": {
+      "validated": "benchmark_validated",
+      "partially_validated": "indirectly_validated"
+    }
+  },
+  "promotion_rule": "A field may carry benchmark_validated or indirectly_validated only if its ceiling allows it, it cites at least one evidence manifest under benchmarks/evidence/, every cited manifest names a tool, a pinned dataset version/hash, a baseline, a metric, an acceptance threshold and a passing result, its validated_for scope covers the field, and it was produced by the current schema major (manifests are listed per field; a manifest names the schema family it was produced on). Promotion is a Validation Owner decision; this registry is the only source of validation status (no call-site override).",
+  "fields": [
+    {
+      "pointer": "/delineation/fiducials/p_onset",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "P-wave delineation is the weakest endpoint in the repository's LUDB/QTDB benchmarks; P waves are frequently missed at short RR (<600 ms) or when the P wave overlaps the preceding T wave."
+      ],
+      "legacy_source": "/beat_features/*/p/onset"
+    },
+    {
+      "pointer": "/delineation/fiducials/p_offset",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "P-wave delineation is the weakest endpoint in the repository's LUDB/QTDB benchmarks; P waves are frequently missed at short RR (<600 ms) or when the P wave overlaps the preceding T wave."
+      ],
+      "legacy_source": "/beat_features/*/p/offset"
+    },
+    {
+      "pointer": "/delineation/fiducials/qrs_onset",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [],
+      "legacy_source": "/beat_features/*/qrs/onset"
+    },
+    {
+      "pointer": "/delineation/fiducials/r_peak",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [],
+      "legacy_source": "/beat_features/*/r_peak_index"
+    },
+    {
+      "pointer": "/delineation/fiducials/qrs_offset",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [],
+      "legacy_source": "/beat_features/*/qrs/offset"
+    },
+    {
+      "pointer": "/delineation/fiducials/j_point",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [],
+      "legacy_source": "/beat_features/*/j_index"
+    },
+    {
+      "pointer": "/delineation/fiducials/t_offset",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [],
+      "legacy_source": "/beat_features/*/t/offset"
+    },
+    {
+      "pointer": "/measurements/intervals/p_duration_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "P-wave delineation is the weakest endpoint in the repository's LUDB/QTDB benchmarks; P waves are frequently missed at short RR (<600 ms) or when the P wave overlaps the preceding T wave."
+      ],
+      "legacy_source": "/beat_features/*/p_dur_ms"
+    },
+    {
+      "pointer": "/measurements/intervals/pr_interval_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "P-wave delineation is the weakest endpoint in the repository's LUDB/QTDB benchmarks; P waves are frequently missed at short RR (<600 ms) or when the P wave overlaps the preceding T wave."
+      ],
+      "legacy_source": "/beat_features/*/pr_ms"
+    },
+    {
+      "pointer": "/measurements/intervals/qrs_duration_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Per-beat per-lead QRS width; the record-level consensus QRS can differ from per-lead widths near 100-120 ms."
+      ],
+      "legacy_source": "/beat_features/*/qrs_ms"
+    },
+    {
+      "pointer": "/measurements/intervals/qt_interval_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Raw measured interval; it is not formal QT reporting and is not rate corrected."
+      ],
+      "legacy_source": "/beat_features/*/qt_ms"
+    },
+    {
+      "pointer": "/measurements/intervals/tpeak_tend_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [],
+      "legacy_source": "/beat_features/*/tpe_ms"
+    },
+    {
+      "pointer": "/measurements/intervals/jt_interval_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [],
+      "legacy_source": "/beat_features/*/jt_ms"
+    },
+    {
+      "pointer": "/measurements/amplitudes/p_amplitude_uv",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "LUDB distributes amplitude-normalised signals, so LUDB results cannot validate amplitudes.",
+        "P-wave delineation is the weakest endpoint in the repository's LUDB/QTDB benchmarks; P waves are frequently missed at short RR (<600 ms) or when the P wave overlaps the preceding T wave."
+      ],
+      "legacy_source": "/beat_features/*/p_amp_mv"
+    },
+    {
+      "pointer": "/measurements/amplitudes/r_amplitude_uv",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "LUDB distributes amplitude-normalised signals, so LUDB results cannot validate amplitudes."
+      ],
+      "legacy_source": "/beat_features/*/r_amp_mv"
+    },
+    {
+      "pointer": "/measurements/amplitudes/s_amplitude_uv",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "LUDB distributes amplitude-normalised signals, so LUDB results cannot validate amplitudes."
+      ],
+      "legacy_source": "/beat_features/*/s_amp_mv"
+    },
+    {
+      "pointer": "/measurements/amplitudes/st_80ms_uv",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "LUDB distributes amplitude-normalised signals, so LUDB results cannot validate amplitudes.",
+        "Legacy native ST level at J+80 ms on the analysis signal; the opt-in hybrid ST sources do not replace this published value."
+      ],
+      "legacy_source": "/beat_features/*/st_80ms_mv"
+    },
+    {
+      "pointer": "/measurements/amplitudes/t_amplitude_uv",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "LUDB distributes amplitude-normalised signals, so LUDB results cannot validate amplitudes."
+      ],
+      "legacy_source": "/beat_features/*/t_amp_mv"
+    },
+    {
+      "pointer": "/measurements/amplitudes/u_amplitude_uv",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "LUDB distributes amplitude-normalised signals, so LUDB results cannot validate amplitudes."
+      ],
+      "legacy_source": "/beat_features/*/u_amp_signed_mv"
+    },
+    {
+      "pointer": "/measurements/areas/qrs_signed_area_uv_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Trapezoid integral of the baseline-subtracted analysis signal over [QRS onset, QRS offset] inclusive; legacy unit mV x internal sample converted by 1e6 / internal_fs."
+      ],
+      "legacy_source": "/beat_features/*/qrs_signed_area"
+    },
+    {
+      "pointer": "/measurements/global/heart_rate_bpm",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [],
+      "legacy_source": "/global_features/heart_rate_bpm"
+    },
+    {
+      "pointer": "/measurements/global/frontal_qrs_axis_deg",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "not_applicable(input_mode_limited) for limited input."
+      ],
+      "legacy_source": "/global_features/qrs_axis_deg"
+    },
+    {
+      "pointer": "/measurements/global/qtc_bazett_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Formal QTc; not_applicable(input_mode_limited) for limited input."
+      ],
+      "legacy_source": "/global_features/qtc_bazett_ms"
+    },
+    {
+      "pointer": "/measurements/global/qrs_wide_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [],
+      "legacy_source": "/global_features/qrs_wide_ms"
+    },
+    {
+      "pointer": "/measurements/flags/p_present",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Algorithm observation, not proof of physiological absence; read the per-cell reason and scope."
+      ],
+      "legacy_source": "/beat_features/*/wave_observations/p"
+    },
+    {
+      "pointer": "/measurements/flags/qrs_present",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Algorithm observation, not proof of physiological absence; read the per-cell reason and scope."
+      ],
+      "legacy_source": "/beat_features/*/wave_observations/qrs"
+    },
+    {
+      "pointer": "/measurements/flags/q_present",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Algorithm observation, not proof of physiological absence; read the per-cell reason and scope."
+      ],
+      "legacy_source": "/beat_features/*/wave_observations/q"
+    },
+    {
+      "pointer": "/measurements/flags/r_present",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Algorithm observation, not proof of physiological absence; read the per-cell reason and scope."
+      ],
+      "legacy_source": "/beat_features/*/wave_observations/r"
+    },
+    {
+      "pointer": "/measurements/flags/s_present",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Algorithm observation, not proof of physiological absence; read the per-cell reason and scope."
+      ],
+      "legacy_source": "/beat_features/*/wave_observations/s"
+    },
+    {
+      "pointer": "/measurements/flags/r_prime_present",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Algorithm observation, not proof of physiological absence; read the per-cell reason and scope."
+      ],
+      "legacy_source": "/beat_features/*/wave_observations/r_prime"
+    },
+    {
+      "pointer": "/measurements/flags/s_prime_present",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Algorithm observation, not proof of physiological absence; read the per-cell reason and scope."
+      ],
+      "legacy_source": "/beat_features/*/wave_observations/s_prime"
+    },
+    {
+      "pointer": "/measurements/flags/t_present",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Algorithm observation, not proof of physiological absence; read the per-cell reason and scope."
+      ],
+      "legacy_source": "/beat_features/*/wave_observations/t"
+    },
+    {
+      "pointer": "/measurements/flags/u_present",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Algorithm observation, not proof of physiological absence; read the per-cell reason and scope."
+      ],
+      "legacy_source": "/beat_features/*/wave_observations/u"
+    },
+    {
+      "pointer": "/measurements/global/p_duration_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "benchmark_validated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [
+        "ludb-p-duration-ms-record-1.1"
+      ],
+      "validated_for": "Record-level value of resting 10 s, 500 Hz, 12-lead ECGs (input_mode standard_12, default configuration) in populations like LUDB 1.0.1; IEC 60601-2-25 global-interval limits ±10/15 ms after CSE trimming",
+      "known_limitations": [
+        "Record-level value from the engine's global measurement; read the feature state before use.",
+        "LUDB vs expert reference: mean +0.2 ms, SD 11.5 ms (n=164).",
+        "PTB-XL hold-out vs GE 12SL (indirect): mean +3.6 ms, SD 16.9 ms (n=2657), outside the IEC limits ±10/15 ms; for context, Uni-G vs 12SL on the same records: mean -0.4 ms, SD 14.9 ms."
+      ],
+      "legacy_source": "/global_features/p_duration_ms"
+    },
+    {
+      "pointer": "/measurements/global/pr_interval_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "benchmark_validated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [
+        "ludb-pr-interval-ms-record-1.1"
+      ],
+      "validated_for": "Record-level value of resting 10 s, 500 Hz, 12-lead ECGs (input_mode standard_12, default configuration) in populations like LUDB 1.0.1; IEC 60601-2-25 global-interval limits ±10/10 ms after CSE trimming",
+      "known_limitations": [
+        "Record-level PR; withheld when lead-level P onsets conflict.",
+        "LUDB vs expert reference: mean +2.9 ms, SD 5.5 ms (n=162).",
+        "PTB-XL hold-out vs GE 12SL (indirect): mean +0.7 ms, SD 10.7 ms (n=2601), outside the IEC limits ±10/10 ms; for context, Uni-G vs 12SL on the same records: mean -4.4 ms, SD 12.5 ms."
+      ],
+      "legacy_source": "/global_features/pr_ms"
+    },
+    {
+      "pointer": "/measurements/global/qrs_duration_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "benchmark_validated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [
+        "ludb-qrs-duration-ms-record-1.1",
+        "ptbxl-qrs-duration-ms-record-1.1"
+      ],
+      "validated_for": "Record-level value of resting 10 s, 500 Hz, 12-lead ECGs (input_mode standard_12, default configuration) in populations like LUDB 1.0.1; IEC 60601-2-25 global-interval limits ±10/10 ms after CSE trimming",
+      "known_limitations": [
+        "Record-level value from the engine's global measurement; read the feature state before use.",
+        "LUDB vs expert reference: mean +2.7 ms, SD 6.6 ms (n=192).",
+        "PTB-XL hold-out vs GE 12SL (indirect): mean -0.1 ms, SD 7.9 ms (n=2992), within the same limits."
+      ],
+      "legacy_source": "/global_features/qrs_ms"
+    },
+    {
+      "pointer": "/measurements/global/qt_interval_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "benchmark_validated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [
+        "ludb-qt-interval-ms-record-1.1",
+        "ptbxl-qt-interval-ms-record-1.1"
+      ],
+      "validated_for": "Record-level value of resting 10 s, 500 Hz, 12-lead ECGs (input_mode standard_12, default configuration) in populations like LUDB 1.0.1; IEC 60601-2-25 global-interval limits ±25/30 ms after CSE trimming",
+      "known_limitations": [
+        "Record-level QT from the multilead T-end fusion; check the feature state (qt_not_reportable marks a value that failed the QT reportability gate).",
+        "LUDB vs expert reference: mean +9.0 ms, SD 10.7 ms (n=191).",
+        "PTB-XL hold-out vs GE 12SL (indirect): mean -0.1 ms, SD 13.7 ms (n=2983), within the same limits.",
+        "About 30% of values carry a non-observed feature state (QT reportability gate); they are included in the evidence above; read the state before using a value."
+      ],
+      "legacy_source": "/global_features/qt_ms"
+    },
+    {
+      "pointer": "/measurements/global/qtc_fridericia_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Record-level value from the engine's global measurement; read the feature state before use."
+      ],
+      "legacy_source": "/global_features/qtc_fridericia_ms"
+    },
+    {
+      "pointer": "/measurements/global/qtc_framingham_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Record-level value from the engine's global measurement; read the feature state before use."
+      ],
+      "legacy_source": "/global_features/qtc_framingham_ms"
+    },
+    {
+      "pointer": "/measurements/global/qtc_hodges_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Record-level value from the engine's global measurement; read the feature state before use."
+      ],
+      "legacy_source": "/global_features/qtc_hodges_ms"
+    },
+    {
+      "pointer": "/measurements/global/p_axis_deg",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Withheld when the median-beat P wave fails or the rhythm has no organized P waves."
+      ],
+      "legacy_source": "/global_features/p_axis_deg"
+    },
+    {
+      "pointer": "/measurements/global/t_axis_deg",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Hybrid area/amplitude T axis; unreliable at low T amplitude (feature state t_axis_quality_gate)."
+      ],
+      "legacy_source": "/global_features/t_axis_deg"
+    },
+    {
+      "pointer": "/measurements/global/qrs_t_angle_deg",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Record-level value from the engine's global measurement; read the feature state before use."
+      ],
+      "legacy_source": "/global_features/qrs_t_angle_deg"
+    },
+    {
+      "pointer": "/measurements/global/atrial_rate_bpm",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Rate of detected atrial events; in AF/AFL it reflects the detector, not a physiological atrial rate."
+      ],
+      "legacy_source": "/global_features/atrial_rate_bpm"
+    },
+    {
+      "pointer": "/measurements/global/heart_rate_min_bpm",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Record-level value from the engine's global measurement; read the feature state before use."
+      ],
+      "legacy_source": "/global_features/heart_rate_min_bpm"
+    },
+    {
+      "pointer": "/measurements/global/heart_rate_max_bpm",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Record-level value from the engine's global measurement; read the feature state before use."
+      ],
+      "legacy_source": "/global_features/heart_rate_max_bpm"
+    },
+    {
+      "pointer": "/measurements/global/rr_mean_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Record-level value from the engine's global measurement; read the feature state before use."
+      ],
+      "legacy_source": "/global_features/rr_mean_ms"
+    },
+    {
+      "pointer": "/measurements/global/rr_sd_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Standard deviation of RR intervals over the record; ectopic beats are not excluded."
+      ],
+      "legacy_source": "/global_features/rr_sd_ms"
+    },
+    {
+      "pointer": "/measurements/global/rmssd_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Short-record HRV; a 10 s record holds few intervals and ectopic beats are not excluded."
+      ],
+      "legacy_source": "/global_features/rmssd_ms"
+    },
+    {
+      "pointer": "/measurements/global/pnn50",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Fraction (0-1) of successive RR differences above 50 ms; a 10 s record holds few intervals."
+      ],
+      "legacy_source": "/global_features/pnn50"
+    },
+    {
+      "pointer": "/measurements/global/rr_cv",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Coefficient of variation of RR intervals (0-1 fraction)."
+      ],
+      "legacy_source": "/global_features/rr_cv"
+    },
+    {
+      "pointer": "/measurements/global/qt_dispersion_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Record-level value from the engine's global measurement; read the feature state before use."
+      ],
+      "legacy_source": "/global_features/qt_dispersion_ms"
+    },
+    {
+      "pointer": "/measurements/global/ptf_v1_uv_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "indirectly_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "P-terminal force in V1 (negative terminal P amplitude x duration), median beat."
+      ],
+      "legacy_source": "/global_features/ptf_v1_mv_ms"
+    },
+    {
+      "pointer": "/measurements/global/sokolow_lyon_uv",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "indirectly_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "S(V1) + max(R(V5), R(V6)) on median-beat amplitudes; a voltage measurement, not an LVH statement."
+      ],
+      "legacy_source": "/representative_leads/*/params/{s_amp_mv,r_amp_mv}"
+    },
+    {
+      "pointer": "/measurements/global/cornell_voltage_uv",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "indirectly_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "R(aVL) + S(V3) on median-beat amplitudes; a voltage measurement, not an LVH statement."
+      ],
+      "legacy_source": "/representative_leads/*/params/{r_amp_mv,s_amp_mv}"
+    },
+    {
+      "pointer": "/measurements/global/paced_beat_fraction",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "indirectly_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Fraction (0-1) of beats with a confirmed pacing spike."
+      ],
+      "legacy_source": "/metadata/paced_beat_fraction"
+    },
+    {
+      "pointer": "/measurements/global/pacing_spike_count",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "indirectly_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Number of pacing spikes accepted by the revised detector."
+      ],
+      "legacy_source": "/global_features/pacing_spikes"
+    },
+    {
+      "pointer": "/measurements/global/organized_p_fraction",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "indirectly_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Fraction (0-1) of beats with an organized, conducted P wave (atrial rhythm evidence)."
+      ],
+      "legacy_source": "/metadata/rhythm_analysis/af_afl_summary/organized_p_ratio"
+    },
+    {
+      "pointer": "/measurements/global/atrial_residual_rms_uv",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "indirectly_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "RMS of the QRST-subtracted atrial residual; fibrillatory-wave evidence, sensitive to noise."
+      ],
+      "legacy_source": "/metadata/rhythm_analysis/atrial_residual/residual_rms_mv"
+    },
+    {
+      "pointer": "/measurements/global/atrial_dominant_cycle_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "indirectly_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Dominant cycle length of the atrial residual; flutter/fibrillation evidence, not a rhythm label."
+      ],
+      "legacy_source": "/metadata/rhythm_analysis/atrial_residual/dominant_cycle_ms"
+    },
+    {
+      "pointer": "/measurements/intervals/rr_interval_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Interval from the previous beat's R sample; the first beat is not_applicable."
+      ],
+      "legacy_source": "/beats/*/rr_prev_ms"
+    },
+    {
+      "pointer": "/measurements/intervals/median_p_duration_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Median (representative) beat of the dominant non-paced group, measured inside the global QRS window; differs from per-beat cells."
+      ],
+      "legacy_source": "/representative_leads/*/params/p_dur_ms"
+    },
+    {
+      "pointer": "/measurements/intervals/median_pr_interval_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Median (representative) beat of the dominant non-paced group, measured inside the global QRS window; differs from per-beat cells."
+      ],
+      "legacy_source": "/representative_leads/*/params/pr_ms"
+    },
+    {
+      "pointer": "/measurements/intervals/median_qrs_duration_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Median (representative) beat of the dominant non-paced group, measured inside the global QRS window; differs from per-beat cells."
+      ],
+      "legacy_source": "/representative_leads/*/params/qrs_ms"
+    },
+    {
+      "pointer": "/measurements/intervals/median_qt_interval_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Median (representative) beat of the dominant non-paced group, measured inside the global QRS window; differs from per-beat cells."
+      ],
+      "legacy_source": "/representative_leads/*/params/qt_ms"
+    },
+    {
+      "pointer": "/measurements/intervals/median_q_duration_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Median (representative) beat of the dominant non-paced group, measured inside the global QRS window; differs from per-beat cells."
+      ],
+      "legacy_source": "/representative_leads/*/params/q_duration_ms"
+    },
+    {
+      "pointer": "/measurements/amplitudes/median_p_amplitude_uv",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Median (representative) beat of the dominant non-paced group, measured inside the global QRS window; differs from per-beat cells."
+      ],
+      "legacy_source": "/representative_leads/*/params/p_amp_mv"
+    },
+    {
+      "pointer": "/measurements/amplitudes/median_q_amplitude_uv",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Median (representative) beat of the dominant non-paced group, measured inside the global QRS window; differs from per-beat cells."
+      ],
+      "legacy_source": "/representative_leads/*/params/q_amp_mv"
+    },
+    {
+      "pointer": "/measurements/amplitudes/median_r_amplitude_uv",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Median (representative) beat of the dominant non-paced group, measured inside the global QRS window; differs from per-beat cells."
+      ],
+      "legacy_source": "/representative_leads/*/params/r_amp_mv"
+    },
+    {
+      "pointer": "/measurements/amplitudes/median_s_amplitude_uv",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Median (representative) beat of the dominant non-paced group, measured inside the global QRS window; differs from per-beat cells."
+      ],
+      "legacy_source": "/representative_leads/*/params/s_amp_mv"
+    },
+    {
+      "pointer": "/measurements/amplitudes/median_r_prime_amplitude_uv",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Median (representative) beat of the dominant non-paced group, measured inside the global QRS window; differs from per-beat cells."
+      ],
+      "legacy_source": "/representative_leads/*/params/r_prime_amp_mv"
+    },
+    {
+      "pointer": "/measurements/amplitudes/median_st_j_uv",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Median (representative) beat of the dominant non-paced group, measured inside the global QRS window; differs from per-beat cells."
+      ],
+      "legacy_source": "/representative_leads/*/params/st_on_mv"
+    },
+    {
+      "pointer": "/measurements/amplitudes/median_st_40ms_uv",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Median (representative) beat of the dominant non-paced group, measured inside the global QRS window; differs from per-beat cells."
+      ],
+      "legacy_source": "/representative_leads/*/params/st_mid_mv"
+    },
+    {
+      "pointer": "/measurements/amplitudes/median_st_60ms_uv",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "ST level 60 ms after the global J point on the median beat; published only when the global ST path ran."
+      ],
+      "legacy_source": "/representative_leads/*/params/st_hybrid_60ms_mv"
+    },
+    {
+      "pointer": "/measurements/amplitudes/median_st_80ms_uv",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Median (representative) beat of the dominant non-paced group, measured inside the global QRS window; differs from per-beat cells."
+      ],
+      "legacy_source": "/representative_leads/*/params/st_80ms_mv"
+    },
+    {
+      "pointer": "/measurements/amplitudes/median_t_amplitude_uv",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "summary",
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Median (representative) beat of the dominant non-paced group, measured inside the global QRS window; differs from per-beat cells."
+      ],
+      "legacy_source": "/representative_leads/*/params/t_amp_mv"
+    },
+    {
+      "pointer": "/measurements/areas/median_qrs_signed_area_uv_ms",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "Median (representative) beat of the dominant non-paced group, measured inside the global QRS window; differs from per-beat cells."
+      ],
+      "legacy_source": "/representative_leads/*/params/qrs_signed_area_uv_ms"
+    }
+  ],
+  "debug_caps": [
+    {
+      "pointer": "/debug/st_morphology",
+      "publication_tier": "internal_debug",
+      "profiles": [],
+      "validation_tier": "known_problem",
+      "validation_ceiling": "known_problem",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "The four-class ST morphology was never validated and is anti-correlated with ischemia; it must not be used as ischemia evidence."
+      ],
+      "legacy_source": "/beat_features/*/st_morphology"
+    },
+    {
+      "pointer": "/debug/st_pattern_class",
+      "publication_tier": "internal_debug",
+      "profiles": [],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "unvalidated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "No stable definition or validation."
+      ],
+      "legacy_source": "/beat_features/*/st_pattern_class"
+    },
+    {
+      "pointer": "/debug/st_t_confusion",
+      "publication_tier": "internal_debug",
+      "profiles": [],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "unvalidated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "No stable definition or validation."
+      ],
+      "legacy_source": "/beat_features/*/st_t_confusion"
+    }
+  ],
+  "debug_patterns": [
+    {
+      "pattern": "st_hybrid_*",
+      "publication_tier": "internal_debug",
+      "validation_ceiling": "unvalidated",
+      "reason": "Experimental opt-in ST bypass (22 legacy keys); may appear only in debug output."
+    },
+    {
+      "pattern": "twelve_sl_*",
+      "publication_tier": "internal_debug",
+      "validation_ceiling": "unvalidated",
+      "reason": "Vendor-style compatibility block (16 legacy keys); not part of the core schema."
+    }
+  ]
+}
