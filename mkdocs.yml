@@ -36,6 +36,7 @@ nav:
       - Limitations and intended use: limitations.md
       - Compatibility and versioning: compatibility.md
       - Licensing: licensing.md
+      - Changelog: changelog.md
       - FAQ: faq.md
   - Reference:
       - ecgfeat API: reference/api-ecgfeat.md
