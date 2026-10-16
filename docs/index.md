@@ -95,7 +95,7 @@ print(qrs.value, qrs.unit, qrs.validation.tier)
 |---|---|
 | Distribution | `ecg-records` on PyPI |
 | Import name | `ecgfeat` |
-| Current release | 0.2.0 |
+| Current release | 0.3.0 |
 | ECG Record schema | 1.1.0 (reads every `1.*`) |
 | Python | 3.10 – 3.14 |
 | Runtime dependencies | NumPy ≥ 1.26, SciPy ≥ 1.11 |

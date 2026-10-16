@@ -39,6 +39,22 @@
       "legacy_source": "/beat_features/*/p/onset"
     },
     {
+      "pointer": "/delineation/fiducials/p_peak",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "P-wave delineation is the weakest endpoint in the repository's LUDB/QTDB benchmarks; P waves are frequently missed at short RR (<600 ms) or when the P wave overlaps the preceding T wave."
+      ],
+      "legacy_source": "/beat_features/*/p/peak"
+    },
+    {
       "pointer": "/delineation/fiducials/p_offset",
       "publication_tier": "published_measurement",
       "profiles": [
@@ -129,6 +145,36 @@
       "validated_for": null,
       "known_limitations": [],
       "legacy_source": "/beat_features/*/t/offset"
+    },
+    {
+      "pointer": "/delineation/fiducials/t_onset",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [
+        "T onset bounds the ST segment for display and J-point search only; no published interval is derived from it and it has no LUDB/QTDB benchmark here."
+      ],
+      "legacy_source": "/beat_features/*/t/onset"
+    },
+    {
+      "pointer": "/delineation/fiducials/t_peak",
+      "publication_tier": "published_measurement",
+      "profiles": [
+        "all",
+        "debug"
+      ],
+      "validation_tier": "unvalidated",
+      "validation_ceiling": "benchmark_validated",
+      "evidence_ids": [],
+      "validated_for": null,
+      "known_limitations": [],
+      "legacy_source": "/beat_features/*/t/peak"
     },
     {
       "pointer": "/measurements/intervals/p_duration_ms",

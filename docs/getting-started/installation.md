@@ -18,7 +18,8 @@ pip install "ecg-records[engine]"
 
 This installs the ECG Record read/write/query API, the `ecg-record` command
 line, the plotting module and the measurement engine. Both packages depend
-only on NumPy and SciPy, and their versions must match (`pip` enforces it).
+only on NumPy and SciPy, and they must share the minor version, e.g. any
+0.3.x with any 0.3.x (`pip` enforces it).
 
 `pip install ecg-records` alone installs everything except the engine: records
 can be read, queried and plotted, and measuring a signal raises
@@ -48,7 +49,7 @@ Extras combine: `pip install "ecg-records[engine,viz]"`. The record path
 ```python
 import ecgfeat
 
-print(ecgfeat.__version__)               # 0.2.0
+print(ecgfeat.__version__)               # 0.3.0
 print(ecgfeat.STANDARD_12_LEADS)         # ('I', 'II', 'III', 'aVR', ..., 'V6')
 print(ecgfeat.list_examples())           # ['af', 'lbbb', 'sinus']: bundled example ECGs
 ```

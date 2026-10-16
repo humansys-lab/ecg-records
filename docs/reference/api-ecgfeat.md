@@ -2,7 +2,7 @@
 
 # ecg-records API (`ecgfeat`)
 
-Module `ecgfeat` — version `0.2.0`.
+Module `ecgfeat` — version `0.3.0`.
 
 | Name | Kind | Signature | Summary |
 |---|---|---|---|
@@ -64,6 +64,9 @@ Module `ecgfeat` — version `0.2.0`.
 | `ECGWarning` | class | `` | Base class for actionable non-fatal ECG API warnings. |
 | `ECGCompatibilityWarning` | class | `` | A legacy compatibility behavior was used. |
 | `ECGDeprecationWarning` | class | `` | A legacy API is scheduled for removal. |
+| `EngineNotInstalledError` | class | `(message: 'str', *, code: 'str' = 'engine_not_installed', **details: 'object') -> 'None'` | The numerical engine (``ecg-records-engine``) is not installed. |
+| `EngineVersionError` | class | `(message: 'str', *, code: 'str' = 'engine_version_mismatch', **details: 'object') -> 'None'` | An installed ``ecg-records-engine`` does not match this ``ecg-records`` version. |
+| `license_info` | function | `() -> dict` | Licence status of the installed numerical engine (``ecg-records-engine``). |
 | `ECGRecordExtractor` | class | `(config: 'Any' = None) -> 'None'` | Reusable, stateless extractor around the public record boundary. |
 | `dumps_record` | function | `(record: 'ECGRecord', *, profile: 'RecordProfile \| None' = None, indent: 'int \| None' = None) -> 'bytes'` | Canonical UTF-8 JSON bytes of a record: sorted keys, no NaN, compact unless ``indent``. |
 | `loads_record` | function | `(data: 'bytes \| str', *, validate: "Literal['strict', 'schema', 'none']" = 'strict') -> 'ECGRecord'` | Parse ECG Record JSON (duplicate members rejected) and validate at ``validate`` level. |

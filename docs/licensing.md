@@ -7,7 +7,7 @@
 | `ecg-records` | the ECG Record format, readers, queries, plots, the CLI and the measurement pipeline *shell* | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) | pure Python |
 | `ecg-records-engine` | the numerical engine: QRS detection, P/QRS/T delineation, intervals, amplitudes, axes, ST | **PolyForm Noncommercial 1.0.0** for noncommercial use, a **commercial licence** otherwise | compiled wheels (no Python source) |
 
-`pip install "ecg-records[engine]"` installs both at the same version. Reading,
+`pip install "ecg-records[engine]"` installs both, at the same minor version. Reading,
 querying and plotting ECG Records needs only `ecg-records`; measuring a signal
 (`ecg_record`, `ecg_measure`, `ecg-record measure`) needs the engine.
 

@@ -9,12 +9,15 @@ How each value of the legacy `to_dict` export maps to an ECG Record address (`ec
 | Record pointer | Legacy member of `beat_features[*]` | Transform | Profiles |
 |---|---|---|---|
 | `/delineation/fiducials/p_onset` | `p/onset` | native_sample | summary, all, debug |
+| `/delineation/fiducials/p_peak` | `p/peak` | native_sample | all, debug |
 | `/delineation/fiducials/p_offset` | `p/offset` | native_sample | summary, all, debug |
 | `/delineation/fiducials/qrs_onset` | `qrs/onset` | native_sample | summary, all, debug |
 | `/delineation/fiducials/r_peak` | `r_peak_index` | native_sample | summary, all, debug |
 | `/delineation/fiducials/qrs_offset` | `qrs/offset` | native_sample | summary, all, debug |
 | `/delineation/fiducials/j_point` | `j_index` | native_sample | summary, all, debug |
 | `/delineation/fiducials/t_offset` | `t/offset` | native_sample | summary, all, debug |
+| `/delineation/fiducials/t_onset` | `t/onset` | native_sample | all, debug |
+| `/delineation/fiducials/t_peak` | `t/peak` | native_sample | all, debug |
 | `/measurements/intervals/p_duration_ms` | `p_dur_ms` | round_half_even | summary, all, debug |
 | `/measurements/intervals/pr_interval_ms` | `pr_ms` | round_half_even | summary, all, debug |
 | `/measurements/intervals/qrs_duration_ms` | `qrs_ms` | round_half_even | summary, all, debug |

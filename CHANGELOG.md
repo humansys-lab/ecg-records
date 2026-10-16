@@ -6,19 +6,41 @@ record); this file tracks the package.
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-10-15
+
+### Added
+- Three more per-beat, per-lead landmarks in `/delineation/fiducials`
+  (profiles `all` and `debug`; the `summary` byte contract is unchanged):
+  `p_peak`, `t_onset` and `t_peak` (native samples, engine `p/peak`, `t/onset`,
+  `t/peak`), additive within schema 1.1. A P peak outside its P bounds, a T
+  onset after the T offset or a T peak outside its T bounds is withheld with
+  `fiducial_order_violation`; the final P/T bounds and every interval keep
+  their values.
+- `ecgfeat.viz`: `plot_record`, `plot_beat`, `plot_representative_beat`,
+  `plot_clinical` and `export_landmarks` draw/export the P peak, T onset and
+  T peak when the record carries them (colour names the wave, shape the
+  landmark: `^` peak, `>` onset).
+
 ### Changed
 - **Distribution split.** The numerical engine (`ecgfeat._engine`) now ships
   only as the compiled `ecg-records-engine` wheels (CPython 3.10–3.14; Linux
   x86_64/aarch64, macOS x86_64/arm64, Windows x86_64), licensed PolyForm
   Noncommercial 1.0.0 or commercially. `ecg-records` stays Apache-2.0 and pure
-  Python; install both with `pip install "ecg-records[engine]"` (versions must
-  match). Without the engine, measuring raises `EngineNotInstalledError`;
+  Python; install both with `pip install "ecg-records[engine]"` (any versions of
+  the same minor version work together, so a shell-only or engine-only patch
+  release does not need the other package). Without the engine, measuring raises `EngineNotInstalledError`;
   records can still be read, queried and plotted. New: `ecgfeat.license_info()`,
   `EngineNotInstalledError`, `EngineVersionError`; offline licence keys
   (`ECG_RECORDS_LICENSE_KEY`, `ECG_RECORDS_LICENSE`, `~/.config/ecg-records/license.key`).
 - The Kalman recursion of the compiled engine is a Cython kernel
   (`_kalman_kernel.pyx`, bit-identical to the NumPy/Numba reference); Numba is
   only used by source checkouts.
+- Atrial measurement (engine): the P boundary uses the T-corrected primary
+  signal when it agrees better, with a record-quiet noise fallback; one
+  conducted P is kept per cardiac cycle and weak extra atrial events are
+  dropped in anchored cycles. On PTB-XL, PR availability rises (dev .902→.913,
+  hold-out .972→.979) with PR error unchanged; LUDB global measurements are
+  byte-identical.
 
 ## [0.2.0] - 2026-10-14
 

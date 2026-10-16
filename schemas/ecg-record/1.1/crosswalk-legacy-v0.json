@@ -69,6 +69,15 @@
       ]
     },
     {
+      "record": "/delineation/fiducials/p_peak",
+      "legacy_cell_member": "p/peak",
+      "transform": "native_sample",
+      "profiles": [
+        "all",
+        "debug"
+      ]
+    },
+    {
       "record": "/delineation/fiducials/p_offset",
       "legacy_cell_member": "p/offset",
       "transform": "native_sample",
@@ -124,6 +133,24 @@
       "transform": "native_sample",
       "profiles": [
         "summary",
+        "all",
+        "debug"
+      ]
+    },
+    {
+      "record": "/delineation/fiducials/t_onset",
+      "legacy_cell_member": "t/onset",
+      "transform": "native_sample",
+      "profiles": [
+        "all",
+        "debug"
+      ]
+    },
+    {
+      "record": "/delineation/fiducials/t_peak",
+      "legacy_cell_member": "t/peak",
+      "transform": "native_sample",
+      "profiles": [
         "all",
         "debug"
       ]

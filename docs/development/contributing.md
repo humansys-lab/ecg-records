@@ -2,8 +2,11 @@
 
 ## Development setup
 
+The source repository is private (maintainers only); the public repository
+`humansys-lab/ecg-records` holds the documentation, schemas and examples.
+
 ```bash
-git clone https://github.com/humansys-lab/ECG-feature-extraction-.git
+git clone git@github.com:humansys-lab/ECG-feature-extraction-.git   # private
 cd ECG-feature-extraction-
 python -m venv .venv && source .venv/bin/activate
 python -m pip install -r requirements-ci.txt

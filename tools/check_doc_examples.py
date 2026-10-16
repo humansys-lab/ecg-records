@@ -26,7 +26,7 @@ import warnings
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DOCS = ROOT / "docs" / "site"
+DOCS = ROOT / "docs"
 FIXTURE = ROOT / "examples" / "data"
 BLOCK = re.compile(r"(?P<marker><!-- doc-check: skip[^>]*-->\n)?```python\n(?P<code>.*?)\n```", re.S)
 
