@@ -4,7 +4,7 @@
 
 | Version | Where | Current | Changes when |
 |---|---|---|---|
-| **Package** | `ecgfeat.__version__`, PyPI | 0.2.0 | code changes; follows Semantic Versioning |
+| **Package** | `ecgfeat.__version__`, PyPI | 0.3.1 | code changes; follows Semantic Versioning |
 | **Schema** | `record.schema_version`, `/provenance/schema_version` | 1.1.0 | the record format changes |
 
 They move independently. Schema rules:

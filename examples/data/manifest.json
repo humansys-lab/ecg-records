@@ -32,21 +32,21 @@
     5000
   ],
   "schema_version": "1.1.0",
-  "library_version": "0.3.0",
+  "library_version": "0.3.1",
   "records": {
     "summary": {
       "file": "record.summary.json",
-      "sha256": "5be3ca402948694b5282821ffca76ddc88d5ee431e86a0cfd60bfee3591a027d",
+      "sha256": "3be93c8c5de0ecdb078f3de2922e6e85416a1f66b03474f75e2599e2086c79d7",
       "bytes": 29084
     },
     "all": {
       "file": "record.all.json",
-      "sha256": "f181dfdc8f57944237c3ec654948d62660ad3234ff58af6d8a73d7b3d2bc81fd",
+      "sha256": "df8e110511a80ff9655dcd4adc1b90ecaaf0875e1c8a68383072019f1a87290e",
       "bytes": 60869
     },
     "debug": {
       "file": "record.debug.json",
-      "sha256": "b05e7a252665286a53e5bc0728a7cc52bc0c17b8e9918985a70bcd7d05fb74ca",
+      "sha256": "3181c6b75924151d9258e1eeb25a3359f67f96de8dc71de5db4cb595f4c23168",
       "bytes": 63251
     }
   }

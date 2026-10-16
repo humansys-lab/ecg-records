@@ -60,7 +60,7 @@ The legacy extractor always included the interpretation. Use the record API
 
 ### `ECGConfig(p_wave=ecgfeat.PWaveConfig())` fails. Is that a bug?
 
-It is a known issue since 0.1.0, still present in 0.2.0: the top-level
+It is a known issue since 0.1.0, still present in 0.3: the top-level
 `ecgfeat.PWaveConfig` name refers to the legacy engine's class. P-wave settings
 are fixed anyway, so
 leave `p_wave` unset. See [Configuration](guide/configuration.md#p-wave-settings).

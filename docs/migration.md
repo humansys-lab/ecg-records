@@ -37,7 +37,7 @@ validated record instead of a mutable object graph.
 | `from ecgfeat import ECGFeatureExtractor` / `ecgfeat.api` | `ecgfeat.ecg_record(...)` for records; `ecgfeat.compat.api_v0.ECGFeatureExtractor` for the exact legacy object | warns now; removal no earlier than 0.3.0 |
 | `ecgfeat.to_dict`, `ecgfeat.export.to_dict` / `prepare_json_export` | `ecgfeat.dumps_record(record)` / `record_to_dict`; legacy payload: `ecgfeat.compat.export_v0` | warns now; ≥ 0.3.0 |
 | `ecgfeat.models.*` dataclasses | `ecgfeat.compat.models_v0.*` (same classes) | silent alias; ≥ 0.3.0 |
-| `ecgfeat.interpret`, `ecgfeat.clinical_rules`, `ecgfeat.glasgow_rules`, … | the separate [`ecginterpret`](https://pypi.org/project/ecginterpret/) distribution (0.2.0 on PyPI): `ecginterpret.analyze(signal)` or `ecginterpret.interpret_record(record, signal=...)` | aliases warn; ≥ 0.3.0 |
+| `ecgfeat.interpret`, `ecgfeat.clinical_rules`, `ecgfeat.glasgow_rules`, … | the separate [`ecginterpret`](https://pypi.org/project/ecginterpret/) distribution (0.2.1 on PyPI; it installs `ecg-records[engine]` 0.3): `ecginterpret.analyze(signal)` or `ecginterpret.interpret_record(record, signal=...)` | aliases warn; ≥ 0.3.0 |
 | `ecgfeat.plot_beat`, `plot_rep_beat`, … / `ecgfeat.visualize` | `ecgfeat.viz.plot_beat(signal, record, ...)` (`pip install "ecg-records[viz]"`) | warn; ≥ 0.3.0 |
 | `ecgfeat.load_wfdb_mat`, `parse_wfdb_header` | `ecgfeat.io.read_wfdb`, `ecgfeat.io.read_wfdb_header` | warn; ≥ 0.3.0 |
 | `ecgfeat.delineate`, `ecgfeat.quality`, `ecgfeat.features`, … (private engine) | no public replacement; use record fields | alias warns; ≥ 0.3.0 |

@@ -27,7 +27,7 @@ config = ECGConfig(
 | `fs_internal` | `None` | internal analysis sampling rate in Hz (an integer ≥ 100). `None` analyses at the native rate rounded to an integer. Published fiducials are always converted back to native sample indices. |
 | `mains_frequency_hz` | `50` | power-line frequency to suppress: `50` (Europe, Asia), `60` (the Americas, parts of Japan) or `None` for no mains filtering. Set it to match where the recording was made. |
 | `refinement` | all off | optional [experimental refinements](#experimental-refinements) |
-| `p_wave` | default | reserved; must be left at its default (0.1.0 and 0.2.0) (see [below](#p-wave-settings)) |
+| `p_wave` | default | reserved; must be left at its default (0.1.0 to 0.3) (see [below](#p-wave-settings)) |
 | `st_amplitude_source` | `"analysis"` | baseline for the *hybrid* ST candidates: `"analysis"`, `"calibrated_pr"` or `"adaptive_pr_tp"`. Hybrid candidates are not published in schema 1.0, so this does not change any `summary` or `all` value; the published `st_80ms_uv` always uses the native method (`/provenance/fields/st_native`). |
 
 Pass the config to `ecg_record`, `ecg_measure`, `ECGRecordExtractor` or, as a
@@ -84,11 +84,11 @@ Treat it accordingly.
 
 ## P-wave settings
 
-In 0.1.0 and 0.2.0 the P-wave engine runs with fixed settings. `ECGConfig.p_wave` exists
+Up to 0.3 the P-wave engine runs with fixed settings. `ECGConfig.p_wave` exists
 for a future release and accepts only the default value of
 `ecgfeat.config.PWaveConfig`.
 
-!!! warning "Known issue in 0.1.0 and 0.2.0"
+!!! warning "Known issue (0.1.0 to 0.3)"
     The top-level name `ecgfeat.PWaveConfig` refers to the legacy engine's
     P-wave settings class, not to the class `ECGConfig.p_wave` expects.
     `ECGConfig(p_wave=ecgfeat.PWaveConfig())` raises

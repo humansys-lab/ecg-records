@@ -49,7 +49,7 @@ Extras combine: `pip install "ecg-records[engine,viz]"`. The record path
 ```python
 import ecgfeat
 
-print(ecgfeat.__version__)               # 0.3.0
+print(ecgfeat.__version__)               # 0.3.1
 print(ecgfeat.STANDARD_12_LEADS)         # ('I', 'II', 'III', 'aVR', ..., 'V6')
 print(ecgfeat.list_examples())           # ['af', 'lbbb', 'sinus']: bundled example ECGs
 ```

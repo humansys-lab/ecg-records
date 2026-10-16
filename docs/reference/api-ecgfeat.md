@@ -2,7 +2,7 @@
 
 # ecg-records API (`ecgfeat`)
 
-Module `ecgfeat` — version `0.3.0`.
+Module `ecgfeat` — version `0.3.1`.
 
 | Name | Kind | Signature | Summary |
 |---|---|---|---|

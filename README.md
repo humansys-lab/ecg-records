@@ -7,7 +7,7 @@ fiducial points, intervals and amplitudes, signal quality and provenance in
 raw-sample coordinates, with explicit units, an explicit reason for every
 missing value, a stable address for every value and a per-field validation
 status. It reads WFDB, EDF/BDF, CSV and NumPy files and draws clinical-format
-plots. The Python import name is `ecgfeat`. Current release: **0.3.0**
+plots. The Python import name is `ecgfeat`. Current release: **0.3.1**
 (schema 1.1.0).
 
 > This software is research and engineering software. It is not a medical

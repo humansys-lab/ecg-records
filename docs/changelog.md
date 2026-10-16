@@ -6,6 +6,19 @@ record); this file tracks the package.
 
 ## [Unreleased]
 
+## [0.3.1] - 2026-10-16
+
+Shell-only patch: works with `ecg-records-engine` 0.3.0 (any 0.3.x).
+
+### Fixed
+- Project links on PyPI point to the documentation site and the public
+  repository `humansys-lab/ecg-records` (0.3.0 linked the source repository,
+  which is no longer public).
+- Documentation: current-version mentions, the `ecginterpret` version
+  (0.2.1, which requires ecg-records 0.3 with the engine), the P-wave
+  settings known issue (still present in 0.3), and the quickstart notebook's
+  install line and outputs.
+
 ## [0.3.0] - 2026-10-15
 
 ### Added

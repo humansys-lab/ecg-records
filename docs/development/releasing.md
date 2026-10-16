@@ -69,6 +69,7 @@ shell of another minor version (`EngineVersionError`).
 - The source repository is private; the public repository
   `humansys-lab/ecg-records` carries only the documentation, schemas,
   changelog and examples (`docs/`, `schemas/`, `examples/`). After a release,
+  first refresh `docs/site/changelog.md` from `feature_extraction/CHANGELOG.md`, then
   copy `docs/site` → `docs`, `schemas/`, `feature_extraction/CHANGELOG.md` and
   the updated example records there and push; its `docs` workflow deploys the
   site.
@@ -173,3 +174,4 @@ git push origin ecg-records-vX.Y.Z
 | 0.1.0 | 2026-09-24 | first release; uploaded with twine after a TestPyPI rehearsal; the uploaded hashes match the artifacts built from commit `1cb2ccc`; tag `ecg-records-v0.1.0` |
 | 0.2.0 | 2026-10-15 | schema 1.1.0, file readers, clinical plots, first validated fields; built from the research repository's commit `6826fce` (same package source as this repository's tagged commit); uploaded with twine after a TestPyPI rehearsal, together with `ecginterpret` 0.2.0; PyPI hashes match the local artifacts; tag `ecg-records-v0.2.0` |
 | 0.3.0 | 2026-10-16 | engine split: `ecg-records` (Apache-2.0, pure Python) + compiled `ecg-records-engine` (PolyForm Noncommercial or commercial); from commit `45111fa`; engine wheels built locally (Linux x86_64 from `45111fa`; macOS arm64, Windows AMD64 and Linux aarch64 from `0b3b43b`, identical engine source, version metadata set to 0.3.0); macOS x86_64 wheels still to be added; uploaded with twine; PyPI hashes match `SHA256SUMS` (22/22); tag `ecg-records-v0.3.0` |
+| 0.3.1 | 2026-10-16 | shell-only patch (engine stays 0.3.0): PyPI project links to the docs site and the public repository; documentation version fixes; uploaded with twine; tag `ecg-records-v0.3.1` |
